@@ -1,0 +1,54 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.8",
+    "version": "1.0.0",
+    "id": "3d96173f-700c-4f9f-8b63-c60855bfae5b",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://localhost:3978/api/messages",
+        "privacyUrl": "https://localhost:3978/privacy",
+        "termsOfUseUrl": "https://localhost:3978/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Message-Sentiment",
+        "full": ""
+    },
+    "description": {
+        "short": "Short description for Messaging Extension Search.",
+        "full": "Full description of Messaging Extension Search."
+    },
+    "accentColor": "#FFFFFF",
+    "composeExtensions": [
+        {
+            "botId": "3d96173f-700c-4f9f-8b63-c60855bfae5b",
+            "canUpdateConfiguration": true,
+            "commands": [
+                {
+                    "id": "searchQuery",
+                    "type": "query",
+                    "title": "Search",
+                    "description": "Test command to run query",
+                    "initialRun": false,
+                    "fetchTask": false,
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "parameters": [
+                        {
+                            "name": "searchQuery",
+                            "title": "Search Query",
+                            "description": "Your search query",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
